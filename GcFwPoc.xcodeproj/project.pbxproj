@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2C2DB3CF2AF2422100FBBC14 /* libproc.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C2DB3CE2AF2422100FBBC14 /* libproc.tbd */; };
+		2CB083DA2AE69A9D009B8D8B /* libbsm.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 2CB083D92AE69A9D009B8D8B /* libbsm.tbd */; };
 		C40A5C46229DD6A500627D50 /* NetworkExtension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C4B45DDD2273A3450050C59B /* NetworkExtension.framework */; };
 		C40A5C4B229DD6A500627D50 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = C40A5C4A229DD6A500627D50 /* main.swift */; };
 		C40A5C50229DD6A500627D50 /* com.akamai.GcFwPocExtension.systemextension in Embed System Extensions */ = {isa = PBXBuildFile; fileRef = C40A5C45229DD6A500627D50 /* com.akamai.GcFwPocExtension.systemextension */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
@@ -46,6 +48,9 @@
 
 /* Begin PBXFileReference section */
 		03411C5003411ED000000001 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		2C2DB3CE2AF2422100FBBC14 /* libproc.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libproc.tbd; path = usr/lib/libproc.tbd; sourceTree = SDKROOT; };
+		2C2DB3D02AF24A8100FBBC14 /* BridgingHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BridgingHeader.h; sourceTree = "<group>"; };
+		2CB083D92AE69A9D009B8D8B /* libbsm.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libbsm.tbd; path = usr/lib/libbsm.tbd; sourceTree = SDKROOT; };
 		6ED719E06ED6DED000000001 /* SampleCode.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; name = SampleCode.xcconfig; path = Configuration/SampleCode.xcconfig; sourceTree = "<group>"; };
 		6ED8E4306ED7A1A000000001 /* LICENSE.txt */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = LICENSE.txt; sourceTree = "<group>"; };
 		C40A5C45229DD6A500627D50 /* com.akamai.GcFwPocExtension.systemextension */ = {isa = PBXFileReference; explicitFileType = "wrapper.system-extension"; includeInIndex = 0; path = com.akamai.GcFwPocExtension.systemextension; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -69,6 +74,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2C2DB3CF2AF2422100FBBC14 /* libproc.tbd in Frameworks */,
+				2CB083DA2AE69A9D009B8D8B /* libbsm.tbd in Frameworks */,
 				C40A5C46229DD6A500627D50 /* NetworkExtension.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -108,6 +115,7 @@
 				C40A5C4A229DD6A500627D50 /* main.swift */,
 				C40A5C4C229DD6A500627D50 /* Info.plist */,
 				C40A5C4D229DD6A500627D50 /* GcFwPocExtension.entitlements */,
+				2C2DB3D02AF24A8100FBBC14 /* BridgingHeader.h */,
 			);
 			path = GcFwPocExtension;
 			sourceTree = "<group>";
@@ -150,6 +158,8 @@
 		C4B45DDC2273A3450050C59B /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				2C2DB3CE2AF2422100FBBC14 /* libproc.tbd */,
+				2CB083D92AE69A9D009B8D8B /* libbsm.tbd */,
 				C4B45DDD2273A3450050C59B /* NetworkExtension.framework */,
 			);
 			name = Frameworks;
@@ -313,6 +323,7 @@
 				PRODUCT_NAME = com.akamai.GcFwPocExtension;
 				PROVISIONING_PROFILE_SPECIFIER = GcFwPocExtension;
 				SKIP_INSTALL = YES;
+				"SWIFT_OBJC_BRIDGING_HEADER[arch=*]" = GcFwPocExtension/BridgingHeader.h;
 				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
@@ -336,6 +347,7 @@
 				PRODUCT_NAME = com.akamai.GcFwPocExtension;
 				PROVISIONING_PROFILE_SPECIFIER = GcFwPocExtension;
 				SKIP_INSTALL = YES;
+				"SWIFT_OBJC_BRIDGING_HEADER[arch=*]" = "GcFwPocExtension\\BridgingHeader.h";
 				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
